@@ -8,4 +8,4 @@ app.config.from_object('settings')
 
 if __name__ == '__main__':
     ResourceOwnerPasswordCredentials(app)
-    app.run(ssl_context='adhoc')
+    app.run(ssl_context='adhoc', port=8000)
