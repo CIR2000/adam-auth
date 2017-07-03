@@ -1,5 +1,5 @@
 from flask import Flask
-from flask.ext.sentinel import ResourceOwnerPasswordCredentials
+from flask_sentinel import ResourceOwnerPasswordCredentials
 
 # still a WIP
 
