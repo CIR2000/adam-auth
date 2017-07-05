@@ -1,15 +1,17 @@
 import os
 import urllib
 
+# TODO remove
 DEBUG = True
 
+uri = os.environ.get('MONGO_URI', 'localhost:27017')
 user = os.environ.get('MONGO_USERNAME')
 if user:
     pw = urllib.parse.quote_plus(os.environ.get('MONGO_PASSWORD'))
     auth = '%s:%s@' % (user, pw)
 else:
     auth = ''
-uri = os.environ.get('MONGO_URI', 'localhost:27017')
+
 SENTINEL_MONGO_URI = "mongodb://%s%s" % (auth, uri)
 SENTINEL_MONGO_DBNAME = 'adam-oauth'
 
