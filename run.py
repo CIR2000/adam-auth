@@ -11,7 +11,7 @@ if port:
 else:
     host = '127.0.0.1'
     port = 8000
-    context = 'adhoc'
+    context = ('server.crt', 'server.key')
 
 app = Flask(__name__)
 app.config.from_object('settings')
