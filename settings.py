@@ -1,8 +1,8 @@
 import os
 import urllib
 
-# TODO remove
-DEBUG = True
+if not os.environ.get('PORT'):
+    DEBUG = True
 
 uri = os.environ.get('MONGO_URI', 'localhost:27017/adam-auth')
 user = os.environ.get('MONGO_USERNAME')

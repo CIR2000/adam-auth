@@ -15,7 +15,7 @@ else:
 
 app = Flask(__name__)
 app.config.from_object('settings')
+ResourceOwnerPasswordCredentials(app)
 
 if __name__ == '__main__':
-    ResourceOwnerPasswordCredentials(app)
     app.run(host=host, port=port, ssl_context=context)
