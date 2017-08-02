@@ -12,8 +12,6 @@ if user:
 else:
     auth = ''
 
-SENTINEL_MONGO_URI = "mongodb://%s%s" % (auth, uri)
-
-redis_url = os.environ.get('REDIS_URL')
-if redis_url:
-    SENTINEL_REDIS_URL = redis_url
+MONGO_URI = "mongodb://%s%s" % (auth, uri)
+REDIS_URL = os.environ.get('REDIS_URL')
+STRIPE_KEY = os.environ.get('STRIPE_API_KEY', 'sk_test_4VgrtV4Mv1yRArMFVUlZ5LyB')
